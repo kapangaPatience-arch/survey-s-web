@@ -1,0 +1,135 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* IMAGE ON RIGHT */
+.header-img {
+    width: 250px;
+    height: 120px;
+    background-image: url("survey in actions 2.jpeg"); /* your image */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(#4b2e1e, #2c1b12);
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover {
+    background: #5a3824;
+}
+
+.content {
+    flex: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: background-image 1s ease-in-out;
+}
+
+/* 🔥 NEW: dark transparent layer */
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* adjust 0.3–0.6 */
+    z-index: 1;
+}
+
+/* 🔥UPDATED overlay */
+.overlay {
+    position: relative;
+    z-index: 2;
+
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.overlay h1 {
+    color: #4CAF50;
+}
+/* CONTENT */
+/*.content {
+    flex: 1;
+    background-image: url("survey-image.png"); 
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+/* OVERLAY TEXT */
+/*.overlay {
+    background: rgba(255,255,255,0.85);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    color: green;}*/
+
+
+button {
+    padding: 12px 25px;
+    background: #6b4a2b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8a623a;
+}

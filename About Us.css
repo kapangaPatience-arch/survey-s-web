@@ -1,0 +1,216 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* IMAGE ON RIGHT */
+.header-img {
+    width: 250px;
+    height: 120px;
+    background-image: url("survey in actions 2.jpeg"); /* your image */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(#4b2e1e, #2c1b12);
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover {
+    background: #5a3824;
+}
+
+.content {
+    flex: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: background-image 1s ease-in-out;
+}
+/* SECTION STYLE*/
+.section {
+    margin-bottom: 60px;
+}
+/* New container for side-by-side Who We Are + What We Do */
+.top-row {
+    display: flex;
+    gap: 40px;               /* space between left and right column */
+    width: 100%;
+    max-width: 1100px;       /* prevent it from becoming too wide on large screens */
+    margin: 0 auto 60px auto; /* center + bottom spacing before cards */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Make sure both sections take roughly equal space */
+.intro-fade,
+.duties {
+    flex: 1;                 /* each takes half (adjust if you want different ratio) */
+    min-width: 0;            /* helps prevent overflow */
+}
+
+/* Values cards – full width below */
+.values {
+    display: flex;
+    gap: 20px;
+    justify-content: center;   /* center the cards */
+    flex-wrap: wrap;           /* allow wrapping on small screens */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Optional: better card sizing on smaller screens */
+@media (max-width: 900px) {
+    .top-row {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+/* FLEX LAYOUT 
+.intro,
+.duties {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* TEXT STYLE */
+.text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text p {
+    line-height: 1.8;
+    letter-spacing: 0.5px; /* calibrated text */
+    color: #444;
+}
+
+
+/* VALUES SECTION 
+.values {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}*/
+
+/*.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: orange;
+    color: white;
+}*/
+.card {
+    background: #f4f4f4;
+    padding: 20px 25px;          /* more top/bottom padding */
+    border-radius: 10px;
+    flex: 1;
+    min-height: unset;           /* remove any forced min-height if you have it */
+    height: auto;                /* let content decide height (default but explicit) */
+    max-height: 220px;           /* ← strongest control: cap the height */
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;                   /* space between icon and text */
+}
+
+.card:hover {
+    background: orange;
+    color: white;
+}
+
+.card-icon {
+    width: 80px;                 /* adjust size as needed */
+    height: 80px;
+    object-fit: contain;         /* keeps proportions */
+    margin-bottom: 10px;
+}
+
+/* Optional: make icons larger on hover */
+.card:hover .card-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+/* Make text bold/larger if you want to emphasize it without heading tag */
+.card p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;            /* slightly bolder */
+}
+
+/* DUTIES LIST */
+ .duties ul {
+    line-height: 2;
+    letter-spacing: 0.5px;
+}

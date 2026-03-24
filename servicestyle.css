@@ -1,0 +1,157 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* IMAGE ON RIGHT */
+.header-img {
+    width: 250px;
+    height: 120px;
+    background-image: url("survey in actions 2.jpeg"); /* your image */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* MAIN LAYOUT */
+.main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(#4b2e1e, #2c1b12);
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover {
+    background: #5a3824;
+}
+/* === NEW SERVICES STYLES === */
+.hero {
+    background-image: url('hero land.jpeg'); /* replace with your wide drone/land photo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+.hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+.hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+.hero h1 { font-size: 42px; margin-bottom: 12px; }
+.hero p { font-size: 20px; }
+
+.services-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.service-card {
+    /*background: white;*/
+    background: rgba(0, 0, 0, 0.45);     /* 45% black – lets image show through clearly */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s;
+     background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55) 0%,     /* darker start at top */
+        rgba(0, 0, 0, 0.80) 45%,
+        rgba(0, 0, 0, 0.95) 100%    /* nearly black at bottom */
+    );
+}
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.service-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 18px;
+}
+.service-card h3 {
+    color: #2c1b12;
+    font-size: 23px;
+    margin: 0 0 14px;
+}
+.service-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+.service-card ul {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 22px;
+    list-style: none;
+}
+.service-card ul li {
+    padding: 6px 0 6px 26px;
+    position: relative;
+}
+.service-card ul li::before {
+    content: "✔";
+    color: #5a3824;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
+.btn-quote {
+    background: #5a3824;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-quote:hover { background: #7a4e36; }
+
+/* Mobile */
+@media (max-width: 900px) {
+    .hero h1 { font-size: 32px; }
+    .services-grid { grid-template-columns: 1fr; }
+}
